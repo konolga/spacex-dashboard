@@ -1,75 +1,55 @@
-# React + TypeScript + Vite
+# SpaceX Launch Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small SpaceX launch analytics dashboard built with React and TypeScript using the SpaceX GraphQL API. The goal is to demonstrate frontend architecture, data modeling, and UX within a limited time-box.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Landing page with 4 cards:
+  - Launches
+  - Dragons
+  - Rockets
+  - Missions
+- Launch detail page:
+  - Time-based bar chart showing number of launches by year
+  - Paginated launches table (10 rows per page by default)
+  - Option to change number of rows per page (bonus requirement)
+- Basic client-side routing between dashboard and launch detail page
+- Loading, empty, and error states that handle a slow or flaky API
+- Simple, responsive layout
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Tech stack
 
-## Expanding the ESLint configuration
+- React (functional components + hooks)
+- TypeScript
+- Vite (build tool and dev server)
+- GraphQL client (graphql-request or Apollo Client)
+- Chart library (for the launches-by-year bar chart)
+- Styling: Tailwind CSS or a lightweight component library
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- Node.js (LTS version)
+- npm or yarn
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Installation
+`npm install` or `yarn`
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Running the app
+`npm run dev` or `yarn dev`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Run tests with:
+`npm test`
+
+## Assumptions and tradeoffs
+TBD
+
+## If I had more time
+TBD
