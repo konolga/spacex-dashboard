@@ -12,7 +12,7 @@
   - [x] React Router.
   - [x] GraphQL client (`graphql-request` or Apollo).
   - [x] Chart library (`recharts` or similar).
-  - [ ] Styling solution (Tailwind or component library).
+  - [x] Styling solution (Tailwind or component library).
 - [x] Configure ESLint + Prettier and basic TypeScript settings.
 - [x] Add `graphql/client` file pointing to `https://spacex-production.up.railway.app/`.
 
@@ -21,18 +21,18 @@
 - [x] Define `launchesPast` query with required fields (`id`, `mission_name`, dates, links, rocket, details).
 - [x] Implement `mapLaunchResponse` to convert API response → `Launch` UI model.
 - [x] Implement `getLaunchYear(launch)` using `launch_date_utc` / `launch_date_local`.
-- [ ] Implement `groupLaunchesByYear`
+- [x] Implement `groupLaunchesByYear`
 - [x] Implement `useLaunches({ page, pageSize })`:
   - [x] Fetch data from GraphQL with `limit` and `offset` if supported.
   - [x] Expose `launches`, `byYear`, `loading`, `error`, and optionally `totalCount`.
 
 ## 4. Routing & Layout
 
-- [ ] Configure app routes:
-  - [ ] `/` → `DashboardPage`.
-  - [ ] `/launches` → `LaunchesPage`.
-  - [ ] `/dragons`, `/rockets`, `/missions` → placeholder pages.
-- [ ] Create basic layout shell (header, main content, simple responsive container).
+- [x] Configure app routes:
+  - [x] `/` → `DashboardPage`.
+  - [x] `/launches` → `LaunchesPage`.
+  - [x] `/dragons`, `/rockets`, `/missions` → placeholder pages.
+- [x] Create basic layout shell (header, main content, simple responsive container).
 
 ## 5. Dashboard (Landing) Page
 

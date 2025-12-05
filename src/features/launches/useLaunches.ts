@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { fetchLaunchesPast } from './launches.api';
 import { mapLaunch, groupLaunchesByYear } from './launches.utils';
-import type { Launch, LaunchesByYear } from './launches.types';
+import type { Launch, LaunchApi, LaunchesByYear } from './launches.types';
 
 type UseLaunchesOptions = {
   page: number;
@@ -28,7 +28,7 @@ export function useLaunches({ page, pageSize }: UseLaunchesOptions): UseLaunches
         setError(null);
 
         const offset = (page - 1) * pageSize;
-        const rawLaunches = await fetchLaunchesPast({ limit: pageSize, offset });
+        const rawLaunches: LaunchApi[] = await fetchLaunchesPast({ limit: pageSize, offset });
         const mapped = rawLaunches.map(mapLaunch);
         const grouped = groupLaunchesByYear(mapped);
 

@@ -41,10 +41,17 @@ export function groupLaunchesByYear(launches: Launch[]): LaunchesByYear[] {
     missions: group.map((l: Launch) => l.missionName).filter(Boolean),
   }));
 
-  return result.sort((a, b) => {
-    if (a.year === null && b.year !== null) return 1;
-    if (b.year === null && a.year !== null) return -1;
-    if (a.year === null && b.year === null) return 0;
-    return a.year - b.year;
-  });
+return result.sort((a, b) => {
+  // Case 1: a has unknown year → a should come after b
+  if (a.year === null && b.year !== null) return 1;
+
+  // Case 2: b has unknown year → b should come before a
+  if (b.year === null && a.year !== null) return -1;
+
+  // Case 3: both years are unknown → keep relative order
+  if (a.year === null && b.year === null) return 0;
+
+  // Case 4: both years are numbers → normal numeric compare
+  return a.year - b.year;
+});
 }
