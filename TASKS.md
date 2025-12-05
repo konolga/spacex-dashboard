@@ -18,13 +18,13 @@
 
 ## 3. GraphQL & Data Layer
 
-- [ ] Define `launchesPast` query with required fields (`id`, `mission_name`, dates, links, rocket, details).
-- [ ] Implement `mapLaunchResponse` to convert API response → `Launch` UI model.
-- [ ] Implement `getLaunchYear(launch)` using `launch_date_utc` / `launch_date_local`.
-- [ ] Implement `groupLaunchesByYear(launches)` → `{ year, count, missions[] }[]`.
-- [ ] Implement `useLaunches({ page, pageSize })`:
-  - [ ] Fetch data from GraphQL with `limit` and `offset` if supported.
-  - [ ] Expose `launches`, `byYear`, `loading`, `error`, and optionally `totalCount`.
+- [x] Define `launchesPast` query with required fields (`id`, `mission_name`, dates, links, rocket, details).
+- [x] Implement `mapLaunchResponse` to convert API response → `Launch` UI model.
+- [x] Implement `getLaunchYear(launch)` using `launch_date_utc` / `launch_date_local`.
+- [ ] Implement `groupLaunchesByYear`
+- [x] Implement `useLaunches({ page, pageSize })`:
+  - [x] Fetch data from GraphQL with `limit` and `offset` if supported.
+  - [x] Expose `launches`, `byYear`, `loading`, `error`, and optionally `totalCount`.
 
 ## 4. Routing & Layout
 
