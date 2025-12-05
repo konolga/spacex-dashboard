@@ -40,16 +40,21 @@ A small SpaceX launch analytics dashboard built with React and TypeScript using 
 - npm or yarn
 
 ### Installation
+
 `npm install` or `yarn`
 
 ### Running the app
+
 `npm run dev` or `yarn dev`
 
 ### Run tests with:
+
 `npm test`
 
 ## Assumptions and tradeoffs
+
 TBD
 
 ## If I had more time
+
 TBD

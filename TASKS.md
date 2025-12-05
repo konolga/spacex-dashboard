@@ -2,19 +2,19 @@
 
 ## 1. Planning & Repo
 
-- [ ] Create repo and scaffold React + TypeScript app (Vite or CRA).
-- [ ] Add `SPEC.md`, `TASKS.md`, and initial `README.md` with problem restatement.
-- [ ] Set up basic project structure (`app`, `modules`, `shared`, `graphql`).
+- [x] Create repo and scaffold React + TypeScript app (Vite or CRA).
+- [x] Add `SPEC.md`, `TASKS.md`, and initial `README.md` with problem restatement.
+- [x] Set up basic project structure (`app`, `modules`, `shared`, `graphql`).
 
 ## 2. Tooling & Infrastructure
 
-- [ ] Install dependencies:
-  - [ ] React Router.
-  - [ ] GraphQL client (`graphql-request` or Apollo).
-  - [ ] Chart library (`recharts` or similar).
+- [x] Install dependencies:
+  - [x] React Router.
+  - [x] GraphQL client (`graphql-request` or Apollo).
+  - [x] Chart library (`recharts` or similar).
   - [ ] Styling solution (Tailwind or component library).
-- [ ] Configure ESLint + Prettier and basic TypeScript settings.
-- [ ] Add `graphql/client` file pointing to `https://spacex-production.up.railway.app/`.
+- [x] Configure ESLint + Prettier and basic TypeScript settings.
+- [x] Add `graphql/client` file pointing to `https://spacex-production.up.railway.app/`.
 
 ## 3. GraphQL & Data Layer
 
@@ -25,6 +25,7 @@
 - [ ] Implement `useLaunches({ page, pageSize })`:
   - [ ] Fetch data from GraphQL with `limit` and `offset` if supported.
   - [ ] Expose `launches`, `byYear`, `loading`, `error`, and optionally `totalCount`.
+
 ## 4. Routing & Layout
 
 - [ ] Configure app routes:
