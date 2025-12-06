@@ -28,7 +28,7 @@ export function useLaunches({ page, pageSize }: UseLaunchesOptions): UseLaunches
         setError(null);
 
         const offset = (page - 1) * pageSize;
-        const rawLaunches: LaunchApi[] = await fetchLaunchesPast({ limit: pageSize, offset });
+        const rawLaunches: LaunchApi[] = await fetchLaunchesPast({ limit: pageSize });
         const mapped = rawLaunches.map(mapLaunch);
         const grouped = groupLaunchesByYear(mapped);
 

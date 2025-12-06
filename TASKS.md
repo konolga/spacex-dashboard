@@ -47,11 +47,11 @@
 
 ## 6. Launch Detail – Chart
 
-- [ ] Implement `LaunchesChart` component:
-  - [ ] Accepts `data: LaunchesByYear[]`.
-  - [ ] Renders responsive bar chart (year on X, count on Y).
-  - [ ] Adds tooltip that shows year, count, and mission names (truncated where necessary).
-- [ ] Handle empty data (render “No data to display” message).
+- [x] Implement `LaunchesChart` component:
+  - [x] Accepts `data: LaunchesByYear[]`.
+  - [x] Renders responsive bar chart (year on X, count on Y).
+  - [x] Adds tooltip that shows year, count, and mission names (truncated where necessary).
+- [x] Handle empty data (render “No data to display” message).
 
 ## 7. Launch Detail – Table
 
