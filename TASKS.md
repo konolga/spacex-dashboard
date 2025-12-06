@@ -36,14 +36,14 @@
 
 ## 5. Dashboard (Landing) Page
 
-- [ ] Implement `DashboardPage` component.
-- [ ] Add 4 cards:
-  - [ ] Launches.
-  - [ ] Dragons.
-  - [ ] Rockets.
-  - [ ] Missions.
-- [ ] Make each card clickable, navigating to corresponding route.
-- [ ] Add minimal copy and visual polish (spacing, hover states).
+- [x] Implement `DashboardPage` component.
+- [x] Add 4 cards:
+  - [x] Launches.
+  - [x] Dragons.
+  - [x] Rockets.
+  - [x] Missions.
+- [x] Make each card clickable, navigating to corresponding route.
+- [x] Add minimal copy and visual polish (spacing, hover states).
 
 ## 6. Launch Detail – Chart
 
